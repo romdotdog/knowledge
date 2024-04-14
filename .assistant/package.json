@@ -1,0 +1,21 @@
+{
+    "name": "~assistant",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "Assistant for rom's knowledge base.",
+    "main": "dist/index.js",
+    "devDependencies": {
+        "@types/diff": "^5.0.9",
+        "@types/node": "^20.11.16",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "ansi-styles": "^6.2.1",
+        "diff": "^5.2.0",
+        "dotenv": "^16.4.5",
+        "escalade": "^3.1.2",
+        "fast-glob": "^3.3.2",
+        "openai": "^4.26.0",
+        "watcher": "^2.3.1"
+    }
+}
