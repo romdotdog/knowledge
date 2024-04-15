@@ -1,13 +1,13 @@
 # unitality
 
-On a set $ X $, a binary operation $ \cdot: X \times X \to X $ is called
-**unital** if there exists $ 1 \in X $ such that $ 1 \cdot x = x = x \cdot 1 $
-for all $ x \in X $.[^1]
+On a set $X$, a binary operation $\cdot: X \times X \to X$ is called **unital**
+if there exists $1 \in X$ such that $1 \cdot x = x = x \cdot 1$ for all
+$x \in X$.[^1]
 
 ## in a category
 
-The binary operation on a generic object $ X $ is unital if the following
-(unitor) [diagram](/math/category-theory/diagram.md) commutes:[^2]
+The binary operation on a generic object $X$ is unital if the following (unitor)
+[diagram](/math/category-theory/diagram.md) commutes:[^2]
 
 $$
 \begin{CD}

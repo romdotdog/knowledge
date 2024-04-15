@@ -1,12 +1,13 @@
 # associativity
 
-On a set $ X $, a binary operation $ \cdot: X \times X \to X $ is called
-**associative** if for all $ a, b, c \in X $, $ a \cdot (b \cdot c) = (a \cdot
-b) \cdot c $ holds.[^1]
+On a set $X$, a binary operation $\cdot: X \times X \to X$ is called
+**associative** if for all $a, b, c \in X$,
+$a \cdot (b \cdot c) = (a \cdot b)
+\cdot c$ holds.[^1]
 
 ## in a category
 
-A binary operation on an object $ X $ is associative if the following
+A binary operation on an object $X$ is associative if the following
 [diagram](/math/category-theory/diagram.md) commutes:[^1]
 
 $$
