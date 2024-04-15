@@ -1,3 +1,4 @@
+import "./chdir.js";
 import { readFile, watch } from "fs/promises";
 import { createPatch, createTwoFilesPatch } from "diff";
 import { pushMessage } from "./chat.js";
@@ -12,7 +13,7 @@ function processPatch(s: string) {
 }
 
 const readFilesState = new Map();
-export async function markFileRead(p: string) {
+async function watchFile(p: string) {
     p = path.relative(process.cwd(), p);
     if (readFilesState.has(p)) {
         return;
@@ -23,7 +24,7 @@ export async function markFileRead(p: string) {
     const w = new Watcher(p, { renameDetection: true });
     w.on("rename", (_, np) => {
         readFilesState.delete(p);
-        markFileRead(np);
+        watchFile(np);
         w.close();
     }).on("change", async () => {
         const old = readFilesState.get(p);
@@ -38,7 +39,7 @@ export async function markFileRead(p: string) {
     });
 }
 
-async function addFile(p: string) {
+async function newFile(p: string) {
     p = path.relative(process.cwd(), p);
 
     const f = await fg(kbGlob, {
@@ -47,17 +48,25 @@ async function addFile(p: string) {
     if (!f.includes(p)) {
         return;
     }
+
     const content = await readFile(p, { encoding: "utf-8" });
     let diff = createTwoFilesPatch("/dev/null", p, "", content);
     diff = processPatch(diff);
     console.log(diff);
     pushMessage({ role: "system", content: diff });
-    markFileRead(p);
+    watchFile(p);
 }
 
-function watchDir(p: string) {
-    new Watcher(p, { recursive: true, ignoreInitial: true })
-        .on("add", addFile)
+async function watchDir(p: string) {
+    const f = await fg(kbGlob, {
+        onlyDirectories: true
+    });
+    if (p !== "." && !f.includes(p)) {
+        return;
+    }
+
+    new Watcher(p, { ignoreInitial: true })
+        .on("add", newFile)
         .on("addDir", watchDir);
 }
 
@@ -69,4 +78,12 @@ watchDir(".");
 
 for (const dir of dirs) {
     watchDir(dir);
+}
+
+const f = await fg(kbGlob, {
+    onlyFiles: true
+});
+
+for (const file of f) {
+    watchFile(file);
 }

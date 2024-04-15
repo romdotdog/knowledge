@@ -1,6 +1,9 @@
 # proposition
 
-**Propositions** are axiomatic. They are either [true](/logic/truth.md) or
-[false](/logic/falsity.md).[1]
+A **proposition** is a type with at most one term.[1]
 
-[1]: https://en.wikipedia.org/wiki/Proposition
+More formally, type $ A $ is a proposition if $ \operatorname{isProp}(A) \equiv
+\prod*{x: A} \prod*{y: A} x = y $ is inhabited.[2]
+
+[1]: https://ncatlab.org/nlab/show/proposition
+[2]: https://ncatlab.org/nlab/show/mere+proposition

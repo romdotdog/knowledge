@@ -1,6 +1,6 @@
 # definition
 
-A **definition** is a [statement](/logic/statement.md) that attaches meaning to
-a term (a word, phrase, or other set of symbols).[1]
+A **definition** is a judgement that some new syntactic expression is equal to
+some existing syntactic expression.[1]
 
-[1]: Paul Herrick - Introduction to Logic
+[1]: https://ncatlab.org/nlab/show/definitional+equality

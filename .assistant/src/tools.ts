@@ -2,7 +2,6 @@ import { readFile } from "fs/promises";
 import OpenAI from "openai";
 import fg from "fast-glob";
 import path from "path";
-import { markFileRead } from "./watch.js";
 import { kbGlob } from "./utils.js";
 
 export const tools: OpenAI.Chat.Completions.ChatCompletionTool[] = [];
@@ -78,7 +77,6 @@ addTool({
                 const content = await readFile(`./${args.path}`, {
                     encoding: "utf-8"
                 });
-                markFileRead(`./${args.path}`);
                 return content;
             } catch {
                 return "error: file not found";

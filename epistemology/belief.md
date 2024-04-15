@@ -1,12 +1,12 @@
 # belief
 
 A [proposition](/logic/proposition.md) is a person's **belief** if they consider
-it to be [true](/logic/truth.md).[1]
+it to be [true](/logic/true.md).[1]
 
-A belief is called a crony belief if it has been adopted primarily to make a
-certain impression on others.[2] A belief is called a merit belief if it has
+A belief is called a **crony belief** if it has been adopted primarily to make a
+certain impression on others.[2] A belief is called a **merit belief** if it has
 been adopted primarily to accurately model the world.[2] Thus, beliefs have two
-dimensions: pragmatic value and social value.
+dimensions: _pragmatic value_ and _social value_.[2]
 
 Humans are incentivized to have crony beliefs because adopting the beliefs that
 would make them the most allies increases their chances of survival.[2]

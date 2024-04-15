@@ -1,4 +1,6 @@
+import "./env.js";
 import "./chdir.js";
+import "./watch.js";
 import ansiStyles from "ansi-styles";
 import readline from "readline";
 import { time } from "./utils.js";

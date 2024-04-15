@@ -2,9 +2,7 @@ import OpenAI from "openai";
 import { tools, availableFunctions } from "./tools.js";
 import ansiStyles from "ansi-styles";
 import assert from "assert";
-import { config } from "dotenv";
 import { readFile, writeFile } from "fs/promises";
-config();
 
 assert(process.env.OPENAI_API_KEY);
 
@@ -14,16 +12,18 @@ const openai = new OpenAI({
 
 assert(process.env.PROMPT);
 
-const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
+const prompt: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
     {
         role: "system",
         content: process.env.PROMPT
     }
 ];
 
+const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [];
+
 try {
     const transcript = await readFile(".transcript", { encoding: "utf-8" });
-    pushMessage(...JSON.parse(transcript).slice(1));
+    messages.push(...JSON.parse(transcript));
 } catch {}
 
 export function pushMessage(
@@ -40,7 +40,7 @@ export async function chat(write: (s: string) => void) {
 
         const completion = await openai.chat.completions.create({
             model: "gpt-4-turbo",
-            messages,
+            messages: messages.concat(prompt),
             tools,
             max_tokens: 500,
             frequency_penalty: 0.5,
@@ -100,6 +100,7 @@ export async function chat(write: (s: string) => void) {
             }
 
             if (chunk.choices[0].finish_reason === "tool_calls") {
+                console.log();
                 for (const toolCall of toolCalls) {
                     if (
                         toolCall.function?.arguments === undefined ||
@@ -147,7 +148,7 @@ export async function chat(write: (s: string) => void) {
             }
         }
 
-        messages.push({
+        pushMessage({
             role: "assistant",
             ...(successfulToolCalls.length
                 ? { tool_calls: successfulToolCalls }
@@ -155,6 +156,6 @@ export async function chat(write: (s: string) => void) {
             ...(res ? { content: res } : {})
         });
 
-        messages.push(...toolResponses);
+        pushMessage(...toolResponses);
     }
 }
