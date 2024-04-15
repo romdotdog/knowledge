@@ -8,6 +8,6 @@ C_0 $ a set $ C_1(X, Y) $ of **morphisms** going from $ X $ to $ Y $ such that
 -   for each object $ X \in C_0 $, there exists $ 1_X \in C_1(X, X) $ called the
     **identity morphism** on $ X $
 -   composition is [associative](/math/associativity.md)
--   composition is [unital](/math/unitality.md)
+-   composition is [unital](/math/unitality.md)[^1]
 
-[1]: https://ncatlab.org/nlab/show/category
+[^1]: https://ncatlab.org/nlab/show/category
