@@ -16,7 +16,7 @@ $g_1 = g_2$.[^1]
 
 ## with hom-sets
 
-$f$ is an epimorphism if for every $Z$ there exists an injective function
+$f$ is an epimorphism if for every $Z$, there exists an injective function
 $\text{Hom}(Y, Z) \rightarrowtail \text{Hom}(X, Z) $.[^1]
 
 [^1]: https://ncatlab.org/nlab/show/epimorphism

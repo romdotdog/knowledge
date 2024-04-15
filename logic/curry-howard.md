@@ -5,16 +5,16 @@ first-order logic and type theory.
 
 ## traditional logic
 
-Where $A$ and $B$ are propositions,
+Where $A$ and $B$ are [propositions](/logic/proposition.md),
 
-**Verum** ($\top$) is the $1$ type.[^1] [^2]
+**Verum** ($\top$) is the $1$ [type](/logic/judgement.md).[^1] [^2]
 
 **Falsum** ($\bot$) is the $0$ type.[^1] [^3]
 
 **Conjunction** ($A \wedge B$) is the product $A \times B$.[^1]
 
-**Disjunction** ($A \vee B$) is the propositional truncation of the coproduct $
-\left\| A + B \right\| $.[^1]
+**Disjunction** ($A \vee B$) is the propositional truncation of the coproduct
+$\left\| A + B \right\|$.[^1]
 
 **Implication** ($A \implies B$) is the function type $A \to B$.[^1]
 

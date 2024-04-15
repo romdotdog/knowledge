@@ -6,8 +6,8 @@ some [objects](/math/category-theory/category.md) of $C$ connected by some
 
 ## with functors
 
-If $C$ is a category and $J$ is a small category a diagram of type $J$ in $C$ is
-a covariant functor $F: J \to C$.[^1] [^2]
+If $C$ is a category and $J$ is a small category, a diagram of type $J$ in $C$
+is a covariant functor $F: J \to C$.[^1] [^2]
 
 [^1]: https://ncatlab.org/nlab/show/diagram
 [^2]: https://en.wikipedia.org/wiki/Functor

@@ -16,7 +16,7 @@ $g_1 = g_2$.[^1]
 
 ## with hom-sets
 
-$f$ is a monomorphism if for every $Z$ and $a: Z \to X$, there exists an
-injective function $\text{Hom}(Z, X) \rightarrowtail \text{Hom}(Z, Y)$.[^1]
+$f$ is a monomorphism if for every $Z$, there exists an injective function
+$\text{Hom}(Z, X) \rightarrowtail \text{Hom}(Z, Y)$.[^1]
 
 [^1]: https://ncatlab.org/nlab/show/monomorphism
