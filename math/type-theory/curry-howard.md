@@ -5,9 +5,9 @@ first-order logic and type theory.
 
 ## traditional logic
 
-Where $A$ and $B$ are [propositions](/logic/proposition.md),
+Where $A$ and $B$ are [propositions](./proposition.md),
 
-**Verum** ($\top$) is the $1$ [type](/logic/judgement.md).[^1] [^2]
+**Verum** ($\top$) is the $1$ [type](./metatheory/judgement.md).[^1] [^2]
 
 **Falsum** ($\bot$) is the $0$ type.[^1] [^3]
 

@@ -7,7 +7,7 @@ $x \in X$.[^1]
 ## in a category
 
 The binary operation on a generic object $X$ is unital if the following (unitor)
-[diagram](/math/category-theory/diagram.md) commutes:[^2]
+[diagram](./category-theory/diagram.md) commutes:[^2]
 
 $$
 \begin{CD}

@@ -1,6 +1,6 @@
 # monoid
 
-A **monoid** is a [category](/math/category-theory/category.md) with one object
+A **monoid** is a [category](./category-theory/category.md) with one object
 $M$.[^1] the elements of the monoid are contained in $\text{Hom}(M, M)$.[^1] The
 monoid's operation is composition.[^1]
 

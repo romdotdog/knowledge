@@ -1,7 +1,7 @@
 # monomorphism
 
-A [morphism](/math/category-theory/category.md) $f: X \to Y$ is called a
-**monomorphism**, a **mono**, or **monic** if for every object $Z$,
+A [morphism](./wild-category.md) $f: X \to Y$ is called a **monomorphism**, a
+**mono**, or **monic** if for every [object](./wild-category.md) $Z$,
 
 $$
 \begin{CD}
@@ -11,8 +11,7 @@ X @>>f> Y
 \end{CD}
 $$
 
-if this [diagram](/math/category-theory/diagram.md) commutes, then
-$g_1 = g_2$.[^1]
+if this [diagram](./diagram.md) commutes, then $g_1 = g_2$.[^1]
 
 ## with hom-sets
 

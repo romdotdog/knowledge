@@ -2,7 +2,7 @@
 
 A **judgement** is an metalingual assertion about a theory.[^1]
 
-In type theory, there are two kinds of judgements:[^2]
+In meta-type theory, there are two kinds of judgements:[^2]
 
 <!-- prettier-ignore -->
 1. $a$ is a **term** of **type** $A$ (and thus $A$ is **inhabited**)

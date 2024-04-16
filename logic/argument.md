@@ -1,15 +1,15 @@
 # argument
 
 <!-- prettier-ignore -->
-An **argument** is an [implication](/logic/curry-howard.md) from a
-[conjunction](/logic/curry-howard.md) of [propositions](/logic/proposition.md) (called **premises**)
+An **argument** is an [implication](../math/type-theory/curry-howard.md) from a
+[conjunction](../math/type-theory/curry-howard.md) of [propositions](../math/type-theory/proposition.md) (called **premises**)
 to a proposition (called the **conclusion**) $\bigwedge_{i} P_i \to C$.
 
 ## strength
 
 In a Heyting algebra, an argument $A$ is said to be **stronger** than an
 argument $B$ if there exists $f$ in the following
-[diagram](/math/category-theory/diagram.md),
+[diagram](../math/category-theory/diagram.md),
 
 $$
 \begin{CD}

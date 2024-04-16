@@ -1,9 +1,9 @@
 # proving-too-much
 
-An [argument](/logic/argument.md) **proves too much** if its
-[conclusion](/logic/argument.md) [implies](/logic/curry-howard.md) a
-[proposition](/logic/proposition.md) that implies
-[falsum](/logic/curry-howard.md).[^1]
+An [argument](../../logic/argument.md) **proves too much** if its
+[conclusion](../../logic/argument.md) [implies](../../math/type-theory/curry-howard.md) a
+[proposition](../../math/type-theory/proposition.md) that implies
+[falsum](../../math/type-theory/curry-howard.md).[^1]
 
 <!-- prettier-ignore -->
 > For example, if someone says "[God exists because you can't prove that he

@@ -1,7 +1,7 @@
 # true
 
-A [theorem](/logic/proposition.md) is **true** if there is a
-[fact](/logic/fact.md) that corresponds with it.[^1]
+A [theorem](../math/type-theory/proposition.md) is **true** if there is a
+[fact](./fact.md) that corresponds with it.[^1]
 
 For example, the theorem that the circumference of the unit circle is
 $2\int_0^1 \sqrt{\frac{1}{1-x^2}}\,\mathrm dx = 2\pi$ corresponds with the fact

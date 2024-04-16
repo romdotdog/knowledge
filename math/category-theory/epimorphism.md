@@ -1,7 +1,7 @@
 # epimorphism
 
-A [morphism](/math/category-theory/category.md) $f: X \to Y$ is called an
-**epimorphism**, an **epi**, or **epic** if for every object $Z$,
+A [morphism](./wild-category.md) $f: X \to Y$ is called an **epimorphism**, an
+**epi**, or **epic** if for every [object](./wild-category.md) $Z$,
 
 $$
 \begin{CD}
@@ -11,8 +11,7 @@ Y @>>g_2> Z
 \end{CD}
 $$
 
-if this [diagram](/math/category-theory/diagram.md) commutes, then
-$g_1 = g_2$.[^1]
+if this [diagram](./diagram.md) commutes, then $g_1 = g_2$.[^1]
 
 ## with hom-sets
 

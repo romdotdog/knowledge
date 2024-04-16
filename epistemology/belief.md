@@ -1,7 +1,7 @@
 # belief
 
-A [proposition](/logic/proposition.md) is a person's **belief** if they consider
-it to be [true](/logic/true.md).[^1]
+A [proposition](../math/type-theory/proposition.md) is a person's **belief** if they consider
+it to be [true](../logic/true.md).[^1]
 
 A belief is called a **crony belief** if it has been adopted primarily to make a
 certain impression on others.[^2] A belief is called a **merit belief** if it

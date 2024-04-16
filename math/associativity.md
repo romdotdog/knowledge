@@ -8,7 +8,7 @@ $a \cdot (b \cdot c) = (a \cdot b)
 ## in a category
 
 A binary operation on an object $X$ is associative if the following
-[diagram](/math/category-theory/diagram.md) commutes:[^1]
+[diagram](./category-theory/diagram.md) commutes:[^1]
 
 $$
 \begin{CD}

@@ -1,8 +1,8 @@
 # diagram
 
-A **diagram** in a [category](/math/category-theory/category.md) $C$ consists of
-some [objects](/math/category-theory/category.md) of $C$ connected by some
-[morphisms](/math/category-theory/category.md) of $C$.[^1]
+A **diagram** in a [category](./category.md) $C$ consists of some
+[objects](./wild-category.md) of $C$ connected by some
+[morphisms](./wild-category.md) of $C$.[^1]
 
 ## with functors
 
