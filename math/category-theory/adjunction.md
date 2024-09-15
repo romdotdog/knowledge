@@ -1,7 +1,7 @@
 # adjunction
 
 An **adjunction** (or **adjoint functors**) is a particular interaction (written
-$ F \dashv G $) between a [functor](./functor.md) $F$ called the **left
+$F \dashv G$) between a [functor](./functor.md) $F$ called the **left
 adjoint** and a functor $G$ called the **right adjoint**.
 
 ## intuition
@@ -13,9 +13,7 @@ vice versa.
 ## product-hom adjunction
 
 A canonical example of this corresponds to currying in computer science. For any
-Y, set $F$ to the product functor $ - \times Y $ and $G$ to the hom functor $
-\mathrm{Hom}(Y, -) $. Then we have the **product-hom adjunction** $ F \dashv G
-$, corresponding to
+Y, set $F$ to the product functor $- \times Y$ and $G$ to the hom functor $\mathrm{Hom}(Y, -)$. Then we have the **product-hom adjunction** $F \dashv G$, corresponding to
 
 $$ F(X) \to Z \cong X \to G(Z) $$
 
