@@ -16,6 +16,16 @@ if this [diagram](./diagram.md) commutes, then $g_1 = g_2$.[^1]
 ## with hom-sets
 
 $f$ is an epimorphism if for every $Z$, there exists an injective function
-$\text{Hom}(Y, Z) \rightarrowtail \text{Hom}(X, Z) $.[^1]
+$\text{Hom}(Y, Z) \overset{- \circ f}{\rightarrowtail} \text{Hom}(X, Z) $.[^1]
+
+From this perspective,
+
+$$
+\begin{CD}
+X @>>f> Y \\
+@VVV @VVV\\
+Z @= Z
+\end{CD}
+$$
 
 [^1]: https://ncatlab.org/nlab/show/epimorphism

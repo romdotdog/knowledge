@@ -33,7 +33,7 @@ async function watchFile(p: string) {
         let diff = createPatch(p, old, new_);
         diff = processPatch(diff);
         console.log(diff);
-        pushMessage({ role: "system", content: diff });
+        pushMessage({ role: "user", content: diff });
 
         readFilesState.set(p, new_);
     });
@@ -53,17 +53,24 @@ async function newFile(p: string) {
     let diff = createTwoFilesPatch("/dev/null", p, "", content);
     diff = processPatch(diff);
     console.log(diff);
-    pushMessage({ role: "system", content: diff });
+    pushMessage({ role: "user", content: diff });
     watchFile(p);
 }
 
 async function watchDir(p: string) {
-    const f = await fg(kbGlob, {
-        onlyDirectories: true
-    });
-    if (p !== "." && !f.includes(p)) {
-        return;
+    if (p !== ".") {
+        p = path.relative(process.cwd(), p);
+        
+        const f = await fg(kbGlob, {
+            onlyDirectories: true
+        });
+
+        if (!f.includes(p)) {
+            return;
+        }
     }
+
+    console.log(`added directory ${p}`);
 
     new Watcher(p, { ignoreInitial: true })
         .on("add", newFile)

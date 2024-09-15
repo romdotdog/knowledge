@@ -3,6 +3,8 @@
 A [proposition](../math/type-theory/proposition.md) is a person's **belief** if they consider
 it to be [true](../logic/true.md).[^1]
 
+A **cached belief** is a belief that a person has formed on some past occasion and hasn't been re-evaluated since then.[^3]
+
 A belief is called a **crony belief** if it has been adopted primarily to make a
 certain impression on others.[^2] A belief is called a **merit belief** if it
 has been adopted primarily to accurately model the world.[^2] Thus, beliefs have
@@ -23,3 +25,4 @@ value, not pragmatic value.[^2]
 
 [^1]: https://en.wikipedia.org/wiki/Belief
 [^2]: https://meltingasphalt.com/crony-beliefs/
+[^3]: https://www.lesswrong.com/tag/cached-thoughts
