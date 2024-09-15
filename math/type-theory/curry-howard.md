@@ -25,13 +25,13 @@ $\left\| A + B \right\|$.[^1]
 Where $P(x)$ is a family of propositions,
 
 <!-- prettier-ignore -->
-**Universal quantification** ($\forall (x: A).\,P(x)$) is the dependent
-product $\prod_{x: A} P(x)$.[^1]
+**Universal quantification** ($\forall (x\colon A).\,P(x)$) is the dependent
+product $\prod_{x\colon A} P(x)$.[^1]
 
 <!-- prettier-ignore -->
-**Existential quantification** ($\exists (x: A).\,P(x)$) 
+**Existential quantification** ($\exists (x\colon A).\,P(x)$) 
 is the propositional truncation of the dependent coproduct
-$\left\| \sum_{x: A} P(x) \right\|$.[^1]
+$\left\| \sum_{x\colon A} P(x) \right\|$.[^1]
 
 [^1]: https://homotopytypetheory.org/book "3.7.1"
 [^2]: https://en.wikipedia.org/wiki/Tee_(symbol)

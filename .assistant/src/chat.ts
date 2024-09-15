@@ -3,7 +3,6 @@ import { availableFunctions } from "./tools.js";
 import ansiStyles from "ansi-styles";
 import assert from "assert";
 import { readFile, writeFile } from "fs/promises";
-import { AssistantStream } from "openai/lib/AssistantStream.mjs";
 
 assert(process.env.OPENAI_API_KEY);
 
@@ -45,91 +44,6 @@ export async function chat(write: (s: string) => void) {
                   });
 
         toolCalls = [];
-
-        function isObj(obj: unknown): obj is Record<string, unknown> {
-            return (
-                obj != null && typeof obj === "object" && !Array.isArray(obj)
-            );
-        }
-
-        // openai is bugged, fails to accumulate properly, so we have to fix it
-        // https://github.com/openai/openai-node/issues/771
-        AssistantStream.accumulateDelta = function (
-            acc: Record<string, any>,
-            delta: Record<string, any>
-        ): Record<string, any> {
-            for (const [key, deltaValue] of Object.entries(delta)) {
-                if (!acc.hasOwnProperty(key)) {
-                    acc[key] = deltaValue;
-                    continue;
-                }
-
-                let accValue = acc[key];
-                if (accValue === null || accValue === undefined) {
-                    acc[key] = deltaValue;
-                    continue;
-                }
-
-                // We don't accumulate these special properties
-                if (key === "index" || key === "type") {
-                    acc[key] = deltaValue;
-                    continue;
-                }
-
-                // Type-specific accumulation logic
-                if (
-                    typeof accValue === "string" &&
-                    typeof deltaValue === "string"
-                ) {
-                    accValue += deltaValue;
-                } else if (
-                    typeof accValue === "number" &&
-                    typeof deltaValue === "number"
-                ) {
-                    accValue += deltaValue;
-                } else if (isObj(accValue) && isObj(deltaValue)) {
-                    accValue = this.accumulateDelta(
-                        accValue as Record<string, any>,
-                        deltaValue as Record<string, any>
-                    );
-                } else if (
-                    Array.isArray(accValue) &&
-                    Array.isArray(deltaValue)
-                ) {
-                    if (
-                        accValue.every(
-                            x => typeof x === "string" || typeof x === "number"
-                        )
-                    ) {
-                        accValue.push(...deltaValue); // Use spread syntax for efficient addition
-                        continue;
-                    } else if (
-                        deltaValue.every(
-                            x =>
-                                isObj(x) &&
-                                x.hasOwnProperty("index") &&
-                                typeof x.index === "number"
-                        )
-                    ) {
-                        for (let i = 0; i < deltaValue.length; i++) {
-                            const index = deltaValue[i].index;
-                            accValue[index] = this.accumulateDelta(
-                                accValue[index],
-                                deltaValue[i]
-                            );
-                        }
-                        continue;
-                    }
-                } else {
-                    throw Error(
-                        `Unhandled record type: ${key}, deltaValue: ${deltaValue}, accValue: ${accValue}`
-                    );
-                }
-                acc[key] = accValue;
-            }
-
-            return acc;
-        };
 
         run = await stream
             .on("textDelta", (textDelta, snapshot) => {

@@ -8,6 +8,6 @@
 
 ## related
 
-Doing the task effectively becomes an [applause light](/communication/applause-lights.md) in the absence of critical thinking and/or the prescence of groupthink.
+Doing the task effectively becomes an [applause light](../../communication/applause-lights.md) in the absence of critical thinking and/or the prescence of groupthink.
 
 [^1]: https://www.lesswrong.com/posts/vyo5EawMbywvTkNQA/lost-purposes-doing-what-s-easy-or-what-s-important

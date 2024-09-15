@@ -1,6 +1,6 @@
 # unitality
 
-On a set $X$, a binary operation $\cdot: X \times X \to X$ is called **unital**
+On a set $X$, a binary operation $\cdot\colon X \times X \to X$ is called **unital**
 if there exists $1 \in X$ such that $1 \cdot x = x = x \cdot 1$ for all
 $x \in X$.[^1]
 
