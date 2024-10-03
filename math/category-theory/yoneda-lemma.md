@@ -8,13 +8,13 @@ between the set of [natural transformations](./natural-transformation.md) from t
 
 ## informally
 
-For any object $ Y\colon \mathcal C $, if you have a natural transformation
+For any object $Y\colon \mathcal C$, if you have a natural transformation
 
 $$ \gamma_X\colon \mathrm{Hom}(X, Y) \to F(X) $$
 
 $\gamma$ will bijectively correspond with an object in $F(Y)$
 
-*Remark.* Remember that if $f\colon X \to Y$, then $F(f)\colon F(Y) \to F(X)$
+Note that if $f\colon X \to Y$, then $F(f)\colon F(Y) \to F(X)$
 
 
 [^1]: https://ncatlab.org/nlab/show/Yoneda+lemma

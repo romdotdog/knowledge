@@ -10,7 +10,10 @@
 -   ~~define "opposite category"~~ **Done**
 -   ~~change categories to use \mathcal~~ **Done**
 -   ~~change : to \colon where applicable~~ **Done**
--   define adjunctions
+-   finish the presheaf definition of a limit in limit.md
+-   define the category $\text{Typ}$ in univalent-category.md
+-   finish the "presheaves are colimits" section in presheaf.md
+-   define adjunctions and add references
 -   define free diagrams
 -   define functions, surjection, injection, bijection
 -   define strawmanning

@@ -9,5 +9,7 @@ is an equivalence.[^1][^2]
 
 ## The category $\mathrm{Typ}$
 
+[TODO]
+
 [^1]: https://hott.github.io/book/hott-online-13-g2e736d1.pdf "9.1.6"
 [^2]: https://ncatlab.org/nlab/show/univalent+category

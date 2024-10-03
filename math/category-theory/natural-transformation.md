@@ -1,4 +1,4 @@
-# natural transformation
+# natural-transformation
 
 A **natural transformation** $\gamma$ between two [functors](./functor.md) $F, G\colon \mathcal C \to \mathcal D$ is a collection of [morphisms](./category.md) in $\mathcal D$ such that for each [object](./category.md) $X\colon \mathcal C$, there is a morphism $\gamma_X\colon F(X) \to G(X)$, called the **component** of $\gamma$ at $X$. These components must satisfy the **naturality condition**, which states that for every morphism $f\colon X \to Y$ in $\mathcal C$, the following diagram commutes:[^1]
 
